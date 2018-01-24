@@ -1,0 +1,29 @@
+//Horizontally centering an absolute element
+
+#somelement {
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px
+}
+
+
+OR
+
+
+#somelement {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+
+OR
+
+#somelement {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto
+}
