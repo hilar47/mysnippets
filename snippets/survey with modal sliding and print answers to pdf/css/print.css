@@ -1,0 +1,7 @@
+/* Print Survey Summary */
+
+@media print {
+    .survey-modal-summary .results .score {
+        background-color: red!important;
+    }
+}

@@ -1,0 +1,499 @@
+/* Slider */
+
+.slick-slider {
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    padding-right: 50px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/* Slider */
+
+.slick-loading .slick-list {
+    /* background: #fff url('./ajax-loader.gif') center center no-repeat; */
+}
+
+
+/* Icons */
+
+h3 {
+    text-align: center;
+}
+
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    background-color: #d66137;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 150px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.slick-disabled,
+.slick-prev.slick-disabled:hover,
+.slick-prev.slick-disabled:focus,
+.slick-next.slick-disabled:hover,
+.slick-next.slick-disabled:focus {
+    background-color: #d4d7d9;
+    pointer-events: none;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    background-color: #a64623;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+    opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    /* font-family: 'slick'; */
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+    left: -165px;
+}
+
+.slick-next {
+    left: 175px;
+}
+
+
+/* Gradient for side */
+
+.slick-list:before,
+.slick-list:after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.slick-list:before {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,ffffff+65,ffffff+100&1+0,0.7+65,0+100 */
+    background: -moz-linear-gradient(left, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 0.7) 65%, rgba(245, 245, 245, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 0.7) 65%, rgba(245, 245, 245, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 0.7) 65%, rgba(245, 245, 245, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#00ffffff', GradientType=1);
+    /* IE6-9 */
+    /* IE6-9 */
+    left: 0;
+}
+
+.slick-list:after {
+    background: -moz-linear-gradient(left, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.7) 35%, rgba(245, 245, 245, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.7) 35%, rgba(245, 245, 245, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.7) 35%, rgba(245, 245, 245, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#f5f5f5', GradientType=1);
+    /* IE6-9 */
+    right: 0;
+}
+
+
+/* Dots */
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 30px auto 0px;
+    list-style: none;
+    text-align: center;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    margin: 0 35px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 19px;
+    line-height: 4.5;
+    display: block;
+    width: 30px;
+    height: 65px;
+    padding: 5px;
+    cursor: pointer;
+    color: #555555;
+    border: 0;
+    outline: none;
+    background: transparent;
+    margin: 0;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    opacity: 1;
+}
+
+.slick-dots li button:before {
+    font-size: 85px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #fff;
+    z-index: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li button:after {
+    content: "";
+    width: 45px;
+    height: 7px;
+    position: absolute;
+    background-color: #fff;
+    top: 7px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #894324;
+}
+
+.slick-dots li.slick-active button:after,
+.slick-dots li.slick-active button span {
+    background-color: #894324;
+    /* transition: background-color 1s linear; */
+}
+
+
+/* extra span for dots */
+
+.slick-dots li button span {
+    background-color: #fff;
+    width: 45px;
+    height: 7px;
+    position: absolute;
+    top: 7px;
+    display: inline-block;
+    right: 20px;
+}
+
+
+/* First dot */
+
+.slick-dots li:first-of-type button span {
+    display: none;
+}
+
+
+/* Last dot */
+
+.slick-dots li:nth-last-of-type(1) button {
+    color: #f5f5f5;
+}
+
+.slick-dots li:nth-last-of-type(1) button:after {
+    content: "Summary";
+    width: auto;
+    height: auto;
+    background: none;
+    top: inherit;
+    left: -20px;
+    color: #555555;
+}
+
+
+/* Create a custom radio button */
+
+.label-txt {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal;
+}
+
+.radiobtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #e6e6e6;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.label-txt:hover input~.radiobtn {
+    background-color: #fff;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.label-txt input:checked~.radiobtn {
+    background-color: #fff;
+    border: 1px solid #d86136;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.radiobtn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.label-txt input:checked~.radiobtn:after {
+    display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.label-txt .radiobtn:after {
+    top: 6px;
+    left: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d86136;
+}
+
+
+/* Mobile Only */
+
+@media(max-width:1000px) {
+    .slick-list:before,
+    .slick-list:after {
+        display: none;
+    }
+    .slick-slide {
+        padding: 0 15px;
+    }
+    .survey-modal-questions .slick-track ul li {
+        font-size: 15px;
+    }
+    .survey-modal-questions b {
+        position: relative;
+        top: -1px;
+    }
+    .label-txt {
+        margin-bottom: 15px;
+    }
+    .label-txt .radiobtn::after {
+        top: 4px;
+        left: 4px;
+    }
+    .radiobtn {
+        height: 22px;
+        width: 22px;
+    }
+    /* slide dots */
+    .slick-dots {
+        margin: -5px auto 0;
+    }
+    .slick-dots li {
+        width: 30px;
+        height: 20px;
+        margin: 0 8px;
+    }
+    .slick-dots li button {
+        font-size: 14px;
+        width: 30px;
+    }
+    .slick-dots li button::before {
+        font-size: 80px;
+        line-height: 20px;
+        width: 25px;
+        height: 20px;
+    }
+    .slick-dots li button span {
+        width: 20px;
+    }
+    .slick-dots li button::after {
+        width: 20px;
+    }
+    .slick-dots li:nth-last-of-type(1) button::after {
+        content: "Sum.";
+        left: 0;
+    }
+    .slick-prev,
+    .slick-next {
+        width: 120px;
+        font-size: 15px;
+    }
+    .slick-next {
+        left: 130px;
+    }
+    .slick-prev {
+        left: -130px;
+    }
+}

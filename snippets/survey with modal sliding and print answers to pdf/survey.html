@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Modal</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/print.css" />
+
+
+    <!-- scripts -->
+    <script src='js/jquery-1.11.0.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='js/slick.min.js'></script>
+</head>
+
+<body>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-lg survey-start-btn" data-toggle="modal" data-target="#surveyModalStart">Take Survey</button>
+
+
+
+    <!-- Modal Survey Starting Screen -->
+    <div id="surveyModalStart" class="modal survey-modal survey-modal-start" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="modal-title">A Survey</h1>
+                    <h3>Take this short survey to see.</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                        specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                        passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                    <button type="button" class="btn btn-default btn-start" data-dismiss="modal" data-toggle="modal" data-target="#surveyModalQuestions">Begin</button>
+                </div>
+                <div class="modal-footer">
+                    <small>All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Survey Questions -->
+    <div id="surveyModalQuestions" class="modal survey-modal survey-modal-questions" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Select the answer that describes your choice</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+
+                <!-- start -->
+                <div class="modal-body">
+                    <div id="quiz_container">
+                        <div class="survey-slider quiz_container">
+                            <div class="single_question" data-question-id="1" data-correct-answer="2">
+                                <h3>1. Question 1:</h3>
+                                <ul class="options">
+                                    <li value="1">
+                                        <label class="label-txt">
+                                            <b>Always have to coax to eat or refuses food</b>
+                                            <input name="radio" type="radio">
+                                            <span class="radiobtn"></span>
+                                        </label>
+                                    </li>
+                                    <li value="2">
+                                        <label class="label-txt">
+                                            <b>Often have to coax to eat</b>
+                                            <input name="radio" type="radio">
+                                            <span class="radiobtn"></span>
+                                        </label>
+                                    </li>
+                                    <li value="3">
+                                        <label class="label-txt">
+                                            <b>Sometimes have to coax to eat</b>
+                                            <input name="radio" type="radio">
+                                            <span class="radiobtn"></span>
+                                        </label>
+                                    </li>
+                                    <li value="4">
+                                        <label class="label-txt">
+                                            <b>Never have to coax to eat</b>
+                                            <input name="radio" type="radio">
+                                            <span class="radiobtn"></span>
+                                        </label>
+                                    </li>
+                                    <li value="5">
+                                        <label class="label-txt">
+                                            <b>Never coax as dog always eat with enthusiasm</b>
+                                            <input name="radio" type="radio">
+                                            <span class="radiobtn"></span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="result"></div>
+                            </div>
+
+                            <div class="single_question" data-question-id="2" data-correct-answer="3">
+                                <h3>2. Question 2:</h3>
+                                <ul class="options">
+                                    <li value="1">
+                                        <label class="label-txt">
+                                            <b>Avoids or hides when food bowl is filled</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="2">
+                                        <label class="label-txt">
+                                            <b>Little interest in meal time</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="3">
+                                        <label class="label-txt">
+                                            <b>Comes to eat when called</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="4">
+                                        <label class="label-txt">
+                                            <b>Anticipates meal time</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="5">
+                                        <label class="label-txt">
+                                            <b>Runs to food bowl</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                </ul>
+                                <div class="result"></div>
+                            </div>
+
+                            <div class="single_question" data-question-id="3" data-correct-answer="1">
+                                <h3>3. Question 3:</h3>
+                                <ul class="options">
+                                    <li value="1">
+                                        <label class="label-txt">
+                                            <b>Never seeks food, never begs</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="2">
+                                        <label class="label-txt">
+                                            <b>Rarely seeks or begs for food</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="3">
+                                        <label class="label-txt">
+                                            <b>Sometimes seeks or begs for food when sees, smells, or hears food</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="4">
+                                        <label class="label-txt">
+                                            <b>Always seeks food when sees, smells, or hears food</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="5">
+                                        <label class="label-txt">
+                                           <b>Actively seeks food even when your pet does not see, smell, or hear food</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                </ul>
+                                <div class="result"></div>
+                            </div>
+
+                            <div class="single_question" data-question-id="4" data-correct-answer="2">
+                                <h3>4. Question 4:</h3>
+                                <ul class="options">
+                                    <li value="1">
+                                        <label class="label-txt">
+                                                <b>Avoids or refuses food</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="2">
+                                        <label class="label-txt">
+                                                <b>Slow to eat food</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="3">
+                                        <label class="label-txt">
+                                                <b>Eats food offered in reasonable time</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="4">
+                                        <label class="label-txt">
+                                                <b>Eats food offered quickly</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="5">
+                                        <label class="label-txt">
+                                                <b>Eats food offered rapidly, with enthusiasm</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                </ul>
+                                <div class="result"></div>
+                            </div>
+
+                            <div class="single_question" data-question-id="5" data-correct-answer="4">
+                                <h3>5. Question 5:</h3>
+                                <ul class="options">
+                                    <li value="1">
+                                        <label class="label-txt">
+                                                <b>Eats no food without being force fed</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="2">
+                                        <label class="label-txt">
+                                                <b>Eats half or less of food offered</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="3">
+                                        <label class="label-txt">
+                                                <b>Eats most food offered</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="4">
+                                        <label class="label-txt">
+                                                <b>Eats all food offered</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                    <li value="5">
+                                        <label class="label-txt">
+                                                <b>Eats all food offered and begs for more</b>
+                                                    <input name="radio" type="radio">
+                                                    <span class="radiobtn"></span>
+                                                </label>
+                                    </li>
+                                </ul>
+                                <div class="result"></div>
+                            </div>
+
+                            <!-- empty div for summary -->
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+
+
+                <div class="modal-footer">
+
+
+
+                    <small>All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Survey Summary -->
+    <div id="surveyModalSummary" class="modal survey-modal survey-modal-summary" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Your Summary</h1>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+
+                <!-- start -->
+                <div class="modal-body">
+
+                    <!-- Results -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 results" id="results">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td>
+                                                <h5><strong>Question/</strong>Your Answer</h5>
+                                            </td>
+                                            <td class="text-center">Score</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <!-- answers -->
+                                                <div class="answers"></div>
+                                                <!-- Temporary div which will save data for printing -->
+                                                <div id="printSummary"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="2">
+                                                Your total score: <span class="total correct_answers">0</span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <!-- share results -->
+                            <div class="col-sm-5 col-sm-offset-1 share-results">
+                                <h2>Share These Results<br/>With Your Friends</h2>
+                                <p>If your score is 15 or less, veterinary internal medicine consultants recommend that you share and discuss the results with your veterinarian. Download now to print or email the results.</p>
+                                <!-- <a class="btn download-summary" onclick="ExportPdf()">Download Summary</a> -->
+                                <a class="btn download-summary" onclick="return xepOnline.Formatter.Format('results');">Download Summary</a>
+                                <hr class="no-mobile" />
+                                <a class="btn begin-surey-again">Begin Survey Again</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+
+
+                <div class="modal-footer">
+
+
+                    <small>All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/survey-quiz.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <script src="js/xepOnline.jqPlugin.js"></script>
+
+</body>
+
+</html>
