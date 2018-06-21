@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <div id="data">
+        <img src="screenshot.jpg" width="400" />
+    </div>
+    <img id="temp" crossorigin="anonymous" />
+    <!-- <a id="link"></a> -->
+    <!-- <a id="download" download="image.png">Click Me</a> -->
+    <!--<a id="download" download="image.png"></a> -->
+    <button id="btn" type="button">Download</button>
+
+    <a id="download">Download as image</a>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+
+    <script>
+        $("#btn").click(function() {
+            //document.createElement('img');
+
+            // var image = document.getElementById("myCanvas").toDataURL("image/png")
+            //     .replace("image/png", "image/octet-stream");
+            // download.setAttribute("href", image);
+
+            // var img = new Image();
+            // img.crossOrigin = 'anonymous';
+            // img.src = "abc.png";
+
+            // document.body.appendChild(image);
+
+            // document.body.appendChild(img);
+
+            html2canvas(document.querySelector("#data"), {
+                allowTaint: true,
+                useCORS: true
+            }).then(canvas => {
+                document.body.appendChild(canvas)
+                canvas.id = "myCanvas";
+
+                // var link = document.getElementById('link');
+                // link.setAttribute('download', 'MintyPaper.png');
+                // link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+                // link.click();
+
+
+
+                // var image = new Image();
+                // image.src = canvas.toDataURL("image/png");
+                // return image;
+
+
+
+            });
+        });
+
+        html2canvas(document.querySelector("#data"), {
+            allowTaint: true,
+            useCORS: true
+        }).then(canvas => {
+            document.body.appendChild(canvas)
+            canvas.id = "myCanvas";
+
+            // var link = document.getElementById('link');
+            // link.setAttribute('download', 'MintyPaper.png');
+            // link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+            // link.click();
+
+
+
+            // var image = new Image();
+            // image.src = canvas.toDataURL("image/png");
+            // return image;
+
+
+
+        });
+
+        function downloadCanvas(link, canvasId, filename) {
+            link.href = document.getElementById("myCanvas").toDataURL();
+            link.download = filename;
+        }
+
+        document.getElementById('download').addEventListener('click', function() {
+            downloadCanvas(this, 'canvas', 'test.png');
+        }, false);
+    </script>
+</body>
+
+</html>
